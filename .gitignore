@@ -8,6 +8,9 @@ local.properties
 # Log/OS Files
 *.log
 
+# MacOS
+*/.DS.Store
+
 # Android Studio generated files and folders
 captures/
 .externalNativeBuild/
