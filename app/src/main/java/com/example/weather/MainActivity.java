@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import org.w3c.dom.Text;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private ImageButton ib_document;    //文件按钮
     private ImageButton ib_settting;    //设置按钮
@@ -31,11 +31,26 @@ public class MainActivity extends AppCompatActivity {
 
         ib_document = findViewById(R.id.ib_document);
         ib_settting = findViewById(R.id.ib_setting);
+
         ll_cities = findViewById(R.id.ll_cities);
         tv_temperature = findViewById(R.id.tv_temperature);
         tv_weather = findViewById(R.id.tv_weather);
         tv_suggestion = findViewById(R.id.tv_suggestion);
 
+        //为图片按钮添加监听事件
+        ib_document.setOnClickListener(this);
+        ib_settting.setOnClickListener(this);
+    }
 
+    @Override
+    public void onClick(View view){
+        int id = view.getId();
+        //判断点击的按钮
+        if(id == R.id.ib_document){
+            //文件按钮
+        }
+        if (id == R.id.ib_setting){
+            //设置按钮
+        }
     }
 }
